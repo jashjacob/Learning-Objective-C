@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="P4R-NR-YNH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -22,10 +22,10 @@
                                 <color key="tintColor" red="0.062745101750000004" green="0.21568629149999999" blue="0.16078431900000001" alpha="1" colorSpace="deviceRGB"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhh-2Q-T4Z">
-                                <rect key="frame" x="20" y="20" width="100" height="25"/>
+                                <rect key="frame" x="20" y="95" width="100" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="28"/>
-                                <color key="textColor" red="1" green="0.089344917314371775" blue="0.10218912039805783" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.94621301269944402" green="1" blue="0.94765128078043592" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wa3-Di-INR">
@@ -53,6 +53,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.062745101750000004" green="0.21568629149999999" blue="0.16078431900000001" alpha="1" colorSpace="deviceRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="d4j-p2-FXp">
+                        <barButtonItem key="rightBarButtonItem" title="Owner" style="plain" id="r81-Pw-k2b">
+                            <color key="tintColor" red="0.96446438230190934" green="0.89416860499017681" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="uJA-pw-jRm" kind="push" id="CCR-9g-Ws6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="breedLabel" destination="Wa3-Di-INR" id="qFO-tj-nZT"/>
@@ -62,9 +70,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="720" y="200"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ohb-6s-zpA">
+            <objects>
+                <viewController id="uJA-pw-jRm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h20-2j-wfE"/>
+                        <viewControllerLayoutGuide type="bottom" id="0cF-gA-XxY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hNF-9j-scU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="owner.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Wt8-hf-elG">
+                                <rect key="frame" x="0.0" y="61" width="320" height="518"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mNf-bU-9gr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fqm-NF-jbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="209"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vA2-Sa-4Gs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P4R-NR-YNH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" alpha="0.79999999999999982" contentMode="scaleToFill" id="h9e-Co-9iW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.23810833273338283" green="0.26470389571283787" blue="0.42743542729591832" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="yLn-td-lBR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqv-0Z-BoW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="184"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+    <resources>
+        <image name="owner.jpg" width="532" height="800"/>
+    </resources>
+    <color key="tintColor" red="0.24988976979386351" green="0.17072166392705843" blue="0.25569993622448983" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

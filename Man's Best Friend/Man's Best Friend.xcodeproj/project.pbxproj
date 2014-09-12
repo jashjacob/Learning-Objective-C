@@ -29,6 +29,7 @@
 		A3F4824219C287CC00AB219E /* dog-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4823D19C287CC00AB219E /* dog-4.png */; };
 		A3F4824319C287CC00AB219E /* dog-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4823E19C287CC00AB219E /* dog-5.png */; };
 		A3F4824519C28E2600AB219E /* Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4824419C28E2600AB219E /* Icon120.png */; };
+		A3F4824719C2951600AB219E /* owner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3F4824619C2951600AB219E /* owner.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		A3F4823D19C287CC00AB219E /* dog-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-4.png"; sourceTree = "<group>"; };
 		A3F4823E19C287CC00AB219E /* dog-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-5.png"; sourceTree = "<group>"; };
 		A3F4824419C28E2600AB219E /* Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120.png; sourceTree = "<group>"; };
+		A3F4824619C2951600AB219E /* owner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = owner.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		A31E226A19A8C6AE00C92EEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3F4824619C2951600AB219E /* owner.jpg */,
 				A3F4824419C28E2600AB219E /* Icon120.png */,
 				A3F4823A19C287CB00AB219E /* dog-1.png */,
 				A3F4823B19C287CB00AB219E /* dog-2.png */,
@@ -266,6 +269,7 @@
 				A3F4824119C287CC00AB219E /* dog-3.png in Resources */,
 				A3F4824319C287CC00AB219E /* dog-5.png in Resources */,
 				A3F4824519C28E2600AB219E /* Icon120.png in Resources */,
+				A3F4824719C2951600AB219E /* owner.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
