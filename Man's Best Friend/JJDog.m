@@ -24,10 +24,6 @@
     }
 }
 
--(void)changeBreedToWereWolf
-{
-    self.breed = @"Werewolf";
-}
 
 
 //method with multiple arguments

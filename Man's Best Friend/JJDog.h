@@ -17,7 +17,7 @@
 // @property is used to add the property to the class JJDog
 //int is primitive
 
-@property (nonatomic,strong) NSString *breed;
+@property (nonatomic,strong) NSString *caption;
 //NSString is a class used to represnt collection of characters
 // * indicates pointers to objects
 
@@ -25,7 +25,7 @@
 //UIImages is a class used to represent integer
 
 //primitives and objects are stored differently in memory
-// strong defines how long the object is kept in memory
+// "strong" defines how long the object is kept in memory
 
 @property (nonatomic,strong) NSString *name;
 
@@ -35,7 +35,6 @@
 -(void)barkNumberOfTimes:(int)numberOfTimes;
 //method with parameter int
 
--(void)changeBreedToWereWolf;
 
 -(void)barkNumberOfTimes:(int)numberOfTimes loudly:(BOOL)isLoud; //method with two arguments
 

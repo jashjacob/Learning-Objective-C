@@ -22,13 +22,13 @@
 		A31E228D19A8C6AE00C92EEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A31E228B19A8C6AE00C92EEB /* InfoPlist.strings */; };
 		A31E228F19A8C6AE00C92EEB /* Man_s_Best_FriendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A31E228E19A8C6AE00C92EEB /* Man_s_Best_FriendTests.m */; };
 		A31E229A19A8C80400C92EEB /* JJDog.m in Sources */ = {isa = PBXBuildFile; fileRef = A31E229919A8C80400C92EEB /* JJDog.m */; };
-		A38F35F319B33DF300DE5D8D /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = A38F35F219B33DF300DE5D8D /* dog.png */; };
 		A39592F419B5C8D200FF3023 /* JJPuppy.m in Sources */ = {isa = PBXBuildFile; fileRef = A39592F319B5C8D200FF3023 /* JJPuppy.m */; };
-		A39592F619B5CAFF00FF3023 /* puppy.png in Resources */ = {isa = PBXBuildFile; fileRef = A39592F519B5CAFF00FF3023 /* puppy.png */; };
-		A3FD551919B4A437001439A5 /* dog2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FD551519B4A437001439A5 /* dog2.png */; };
-		A3FD551A19B4A437001439A5 /* dog4.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FD551619B4A437001439A5 /* dog4.png */; };
-		A3FD551B19B4A437001439A5 /* dog1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FD551719B4A437001439A5 /* dog1.png */; };
-		A3FD551C19B4A437001439A5 /* dog3.png in Resources */ = {isa = PBXBuildFile; fileRef = A3FD551819B4A437001439A5 /* dog3.png */; };
+		A3F4823F19C287CC00AB219E /* dog-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4823A19C287CB00AB219E /* dog-1.png */; };
+		A3F4824019C287CC00AB219E /* dog-2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4823B19C287CB00AB219E /* dog-2.png */; };
+		A3F4824119C287CC00AB219E /* dog-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4823C19C287CC00AB219E /* dog-3.png */; };
+		A3F4824219C287CC00AB219E /* dog-4.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4823D19C287CC00AB219E /* dog-4.png */; };
+		A3F4824319C287CC00AB219E /* dog-5.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4823E19C287CC00AB219E /* dog-5.png */; };
+		A3F4824519C28E2600AB219E /* Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F4824419C28E2600AB219E /* Icon120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,14 +63,14 @@
 		A31E228E19A8C6AE00C92EEB /* Man_s_Best_FriendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Man_s_Best_FriendTests.m; sourceTree = "<group>"; };
 		A31E229819A8C80400C92EEB /* JJDog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JJDog.h; path = ../JJDog.h; sourceTree = "<group>"; };
 		A31E229919A8C80400C92EEB /* JJDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JJDog.m; path = ../JJDog.m; sourceTree = "<group>"; };
-		A38F35F219B33DF300DE5D8D /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
 		A39592F219B5C8D200FF3023 /* JJPuppy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJPuppy.h; sourceTree = "<group>"; };
 		A39592F319B5C8D200FF3023 /* JJPuppy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJPuppy.m; sourceTree = "<group>"; };
-		A39592F519B5CAFF00FF3023 /* puppy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puppy.png; sourceTree = "<group>"; };
-		A3FD551519B4A437001439A5 /* dog2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog2.png; sourceTree = "<group>"; };
-		A3FD551619B4A437001439A5 /* dog4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog4.png; sourceTree = "<group>"; };
-		A3FD551719B4A437001439A5 /* dog1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog1.png; sourceTree = "<group>"; };
-		A3FD551819B4A437001439A5 /* dog3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog3.png; sourceTree = "<group>"; };
+		A3F4823A19C287CB00AB219E /* dog-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-1.png"; sourceTree = "<group>"; };
+		A3F4823B19C287CB00AB219E /* dog-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-2.png"; sourceTree = "<group>"; };
+		A3F4823C19C287CC00AB219E /* dog-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-3.png"; sourceTree = "<group>"; };
+		A3F4823D19C287CC00AB219E /* dog-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-4.png"; sourceTree = "<group>"; };
+		A3F4823E19C287CC00AB219E /* dog-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-5.png"; sourceTree = "<group>"; };
+		A3F4824419C28E2600AB219E /* Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,12 +148,12 @@
 		A31E226A19A8C6AE00C92EEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A39592F519B5CAFF00FF3023 /* puppy.png */,
-				A3FD551519B4A437001439A5 /* dog2.png */,
-				A3FD551619B4A437001439A5 /* dog4.png */,
-				A3FD551719B4A437001439A5 /* dog1.png */,
-				A3FD551819B4A437001439A5 /* dog3.png */,
-				A38F35F219B33DF300DE5D8D /* dog.png */,
+				A3F4824419C28E2600AB219E /* Icon120.png */,
+				A3F4823A19C287CB00AB219E /* dog-1.png */,
+				A3F4823B19C287CB00AB219E /* dog-2.png */,
+				A3F4823C19C287CC00AB219E /* dog-3.png */,
+				A3F4823D19C287CC00AB219E /* dog-4.png */,
+				A3F4823E19C287CC00AB219E /* dog-5.png */,
 				A31E226B19A8C6AE00C92EEB /* Man's Best Friend-Info.plist */,
 				A31E226C19A8C6AE00C92EEB /* InfoPlist.strings */,
 				A31E226F19A8C6AE00C92EEB /* main.m */,
@@ -257,15 +257,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3FD551C19B4A437001439A5 /* dog3.png in Resources */,
-				A38F35F319B33DF300DE5D8D /* dog.png in Resources */,
-				A3FD551919B4A437001439A5 /* dog2.png in Resources */,
+				A3F4824019C287CC00AB219E /* dog-2.png in Resources */,
 				A31E227C19A8C6AE00C92EEB /* Images.xcassets in Resources */,
+				A3F4823F19C287CC00AB219E /* dog-1.png in Resources */,
 				A31E226E19A8C6AE00C92EEB /* InfoPlist.strings in Resources */,
 				A31E227719A8C6AE00C92EEB /* Main.storyboard in Resources */,
-				A3FD551B19B4A437001439A5 /* dog1.png in Resources */,
-				A39592F619B5CAFF00FF3023 /* puppy.png in Resources */,
-				A3FD551A19B4A437001439A5 /* dog4.png in Resources */,
+				A3F4824219C287CC00AB219E /* dog-4.png in Resources */,
+				A3F4824119C287CC00AB219E /* dog-3.png in Resources */,
+				A3F4824319C287CC00AB219E /* dog-5.png in Resources */,
+				A3F4824519C28E2600AB219E /* Icon120.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +413,6 @@
 		A31E229319A8C6AE00C92EEB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Man's Best Friend/Man's Best Friend-Prefix.pch";
@@ -426,7 +425,6 @@
 		A31E229419A8C6AE00C92EEB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Man's Best Friend/Man's Best Friend-Prefix.pch";

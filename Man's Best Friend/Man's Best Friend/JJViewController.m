@@ -27,35 +27,34 @@
     // *myDog is a object of class JJDog - alloc for allocating memory and init for initilizing the object
     //two method calls are taking place [[ class alloc]init] - this is known as embedded method call
     
-    myDog.name = @"Layl";
-    myDog.breed = @"St. Bernard";
+    myDog.name = @"Sophie!";
+    myDog.caption = @"Adorable Eyes";
     myDog.age = 1;
-    myDog.image= [UIImage imageNamed:@"dog1.png"];
+    myDog.image= [UIImage imageNamed:@"dog-1.png"];
     
     //imageNamed is a class method - UIImage is a class
     //myDog.image is a UI image object
     
     self.myImageView.image = myDog.image; //myImageView is placed by the UIImage object
     self.nameLabel.text = myDog.name;
-    self.breedLabel.text = myDog.breed;
+    self.breedLabel.text = myDog.caption;
     self.currentIndex = 0;
     
     JJDog *secondDog =[[JJDog alloc]init];
-    secondDog.name=@"Mona";
-    secondDog.breed=@"Shepered";
-    secondDog.image=[UIImage imageNamed:@"dog2.png"];
+   
+    secondDog.caption=@"Miss me?";
+    secondDog.image=[UIImage imageNamed:@"dog-2.png"];
     
     
     JJDog *thirdDog = [[JJDog alloc]init];
-    thirdDog.name=@"Whitewood";
-    thirdDog.breed=@"Terrier";
-    thirdDog.image=[UIImage imageNamed:@"dog3.png"];
+   
+    thirdDog.caption=@"DAWWWWWWWWWWW";
+    thirdDog.image=[UIImage imageNamed:@"dog-3.png"];
     
     JJDog *fourthDog= [[JJDog alloc]init];
-    fourthDog.name = @"Lassie";
-    fourthDog.breed=@"Collie";
-    fourthDog.image =[UIImage imageNamed:@"dog4.png"];
-    
+   
+    fourthDog.caption=@"So cute!";
+    fourthDog.image =[UIImage imageNamed:@"dog-4.png"];
     
     self.myDogs = [[ NSMutableArray alloc]init]; //allocate and initialize space
     //NSMutable array is delcared as a property in the header file so that it is accesible in all methods
@@ -65,19 +64,13 @@
     [self.myDogs addObject:secondDog];
     [self.myDogs addObject:thirdDog];
     [self.myDogs addObject:fourthDog];
-    
-    
-    /* [myDog bark];
-     //method call
-     
-     //method call with arguments
-     [myDog barkNumberOfTimes:7];
-     
-     NSLog(@"%@",myDog.breed);
-     [myDog changeBreedToWereWolf];
-     NSLog(@"%@",myDog.breed);
-     myDog.breed = @"Lab";
-     NSLog(@"%@",myDog.breed);
+  
+    /*
+     NSLog(@"%@",myDog.caption);
+     [myDog changecaptionToWereWolf];
+     NSLog(@"%@",myDog.caption);
+     myDog.caption = @"Lab";
+     NSLog(@"%@",myDog.caption);
      
      [self printHelloWorld]; // to call the method declared locally using "Self"
      
@@ -86,20 +79,21 @@
      int dogYears = [myDog ageInDogYearsFromAge:myDog.age];
      NSLog(@"%i",dogYears);
      
-     */
     
-    
-    JJPuppy *littlePuppy = [[JJPuppy alloc]init];
-    //JJPuppy is inherited from JJDog
     
     [littlePuppy bark]; //bark method is inherited from the base class JJDog
     //bark method is over writen in the JJPuppy.m file
+      */
+   
+    JJPuppy *littlePuppy = [[JJPuppy alloc]init];
+    //JJPuppy is inherited from JJDog
     
-    littlePuppy.name = @"Boo";
-    littlePuppy.breed = @"Pourtogeese";
-    littlePuppy.image = [UIImage imageNamed:@"puppy.png"];
+    littlePuppy.caption = @"^_^";
+    littlePuppy.image = [UIImage imageNamed:@"dog-5.png"];
     
     [self.myDogs addObject:littlePuppy]; //adding the create puppy object to the array to be displayed
+    
+    self.nameLabel.text = myDog.name; // to set the nameLabel to just one name - @"Sophie"!
     
 }
 
@@ -133,21 +127,21 @@
     JJDog *randomDog = [self.myDogs objectAtIndex:randomIndex];
     
     //    self.myImageView.image = randomDog.image;
-    //    self.breedLabel.text = randomDog.breed;
+    //    self.breedLabel.text = randomDog.caption;
     //    self.nameLabel.text=randomDog.name;
     
-    //to load image,breed and name randomly
+    //to load image,caption and name randomly
     
-    [UIView transitionWithView:self.view duration:1.5 options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
+    [UIView transitionWithView:self.view duration:1.2 options:UIViewAnimationOptionTransitionCurlUp animations:^{
         self.myImageView.image = randomDog.image;
-        self.breedLabel.text = randomDog.breed;
-        self.nameLabel.text = randomDog.name;
+        self.breedLabel.text = randomDog.caption;
+        
     } completion:^(BOOL finished) {
         
     }];
     
     
-    sender.title = @"Another Dog maybe?";
+    sender.title = @"Another cute picture ?";
     
 }
 @end
