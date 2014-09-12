@@ -54,7 +54,7 @@
                         <color key="backgroundColor" red="0.062745101750000004" green="0.21568629149999999" blue="0.16078431900000001" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="d4j-p2-FXp">
-                        <barButtonItem key="rightBarButtonItem" title="Owner" style="plain" id="r81-Pw-k2b">
+                        <barButtonItem key="rightBarButtonItem" title="Owner" id="r81-Pw-k2b">
                             <color key="tintColor" red="0.96446438230190934" green="0.89416860499017681" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="uJA-pw-jRm" kind="push" id="CCR-9g-Ws6"/>

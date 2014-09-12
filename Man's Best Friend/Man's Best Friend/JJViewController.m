@@ -28,8 +28,9 @@
     //two method calls are taking place [[ class alloc]init] - this is known as embedded method call
     
     myDog.name = @"Sophie!";
+    
     myDog.caption = @"Adorable Eyes";
-    myDog.age = 1;
+    myDog.age = 3;
     myDog.image= [UIImage imageNamed:@"dog-1.png"];
     
     //imageNamed is a class method - UIImage is a class
@@ -71,23 +72,19 @@
      NSLog(@"%@",myDog.caption);
      myDog.caption = @"Lab";
      NSLog(@"%@",myDog.caption);
-     
-     [self printHelloWorld]; // to call the method declared locally using "Self"
+
      
      [myDog barkNumberOfTimes:5 loudly:YES]; //method call with multiple arguments
      
      int dogYears = [myDog ageInDogYearsFromAge:myDog.age];
      NSLog(@"%i",dogYears);
-     
-    
-    
     [littlePuppy bark]; //bark method is inherited from the base class JJDog
     //bark method is over writen in the JJPuppy.m file
       */
    
     JJPuppy *littlePuppy = [[JJPuppy alloc]init];
     //JJPuppy is inherited from JJDog
-    
+
     littlePuppy.caption = @"^_^";
     littlePuppy.image = [UIImage imageNamed:@"dog-5.png"];
     
@@ -101,11 +98,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)printHelloWorld
-{
-    NSLog(@"Hello World");
 }
 
 - (IBAction)newDogBarButtonItemPressed:(UIBarButtonItem *)sender
@@ -123,14 +115,12 @@
     
     self.currentIndex = randomIndex;
     
-    
     JJDog *randomDog = [self.myDogs objectAtIndex:randomIndex];
     
     //    self.myImageView.image = randomDog.image;
     //    self.breedLabel.text = randomDog.caption;
     //    self.nameLabel.text=randomDog.name;
-    
-    //to load image,caption and name randomly
+    //to load image,caption and name in random
     
     [UIView transitionWithView:self.view duration:1.2 options:UIViewAnimationOptionTransitionCurlUp animations:^{
         self.myImageView.image = randomDog.image;
