@@ -23,10 +23,15 @@
     
     JJFactory *factory = [[JJFactory alloc] init];
     self.tiles = [factory tiles];  //tiles is created in the .h files so that its accessible everywhere
+    self.character = [factory character]; // factory character returns the character set for the first time
+    self.boss = [factory boss];
+    
     
     self.currentPoint = CGPointMake(0,0);
-    [self updateTile];
     
+    [self updateCharacterStatsForArmor:nil withWeapons:nil withHealtheffect:0];
+    
+    [self updateTile];
     [self updateButtons];
     
 }
@@ -40,8 +45,26 @@
 }
 
 - (IBAction)actionButtonPressed:(UIButton *)sender {
+    JJTile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
     
+    if(tile.healthEffect == -15){
+        self.boss.health = self.boss.health - self.character.damage;
+    }
+    [self updateCharacterStatsForArmor:tile.armor withWeapons:tile.weapon withHealtheffect:tile.healthEffect];
+    [self updateTile];
     
+    if(self.character.health <=0)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Death Message" message:@"You have died please restart the game!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alertView show];
+        
+    }else if(self.boss.health <=0)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Victory Message" message:@"You have defeated the boss!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+                                
+        [alertView show];
+    }
+
 }
 
 - (IBAction)northButtonPressed:(UIButton *)sender {
@@ -80,6 +103,17 @@
     JJTile *tileModel = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
     self.storyLabel.text = tileModel.story;
     self.backgroundImageView.image = tileModel.backgroundImage;
+    
+    self.healthLabel.text = [NSString stringWithFormat:@"%i", self.character.health]; //to display the integer in a text label
+    
+    self.damageLabel.text = [NSString stringWithFormat:@"%i", self.character.damage];
+    
+    self.armorLabel.text = self.character.armor.name;
+    self.weaponLabel.text = self.character.weapon.name;
+    
+    
+    [self.actionButton setTitle:tileModel.actionButtonName forState:UIControlStateNormal];
+    
 }
 
 -(void)updateButtons
@@ -99,6 +133,28 @@
         return YES;
     }
 
+}
+
+-(void)updateCharacterStatsForArmor:(JJArmor *)armor withWeapons:(JJWeapon *)weapon withHealtheffect:(int)healthEffect
+{
+
+    if(armor != nil){
+        self.character.health = self.character.health - self.character.armor.health + armor.health;
+        self.character.armor = armor;
+    }
+    else if(weapon !=nil){
+        self.character.damage = self.character.damage - self.character.weapon.damage + weapon.damage;
+        self.character.weapon = weapon;
+    }
+    else if(healthEffect !=0)
+    {
+        self.character.health = self.character.health + healthEffect;
+    }
+    else{
+        self.character.health = self.character.health + self.character.armor.health;
+        self.character.damage = self.character.damage + self.character.weapon.damage;
+    }
+    
 }
 
 @end

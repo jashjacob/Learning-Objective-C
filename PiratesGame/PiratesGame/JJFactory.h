@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JJCharacter.h"
+#import "JJBoss.h"
 
 @interface JJFactory : NSObject
 
 -(NSArray *) tiles;
-
+-(JJCharacter *) character;
+-(JJBoss *)boss;
 
 @end

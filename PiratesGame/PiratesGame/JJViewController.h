@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JJCharacter.h"
+#import "JJBoss.h"
 
 @interface JJViewController : UIViewController
 
 //iVarables
 @property (nonatomic) CGPoint currentPoint;
 @property (strong,nonatomic) NSArray *tiles;
+
+@property (strong,nonatomic) JJCharacter *character;
+@property (strong,nonatomic) JJBoss *boss;
 
 
 //IBoutlets
