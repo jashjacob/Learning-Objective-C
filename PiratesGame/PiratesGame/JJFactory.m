@@ -15,7 +15,6 @@
     
     JJTile *tile1 = [[JJTile alloc]init];
     tile1.story = @"Captain, We need you to defeat the evil pirate boss. Would you like a metallic sword to get started ?";
-    
     tile1.backgroundImage= [UIImage imageNamed:@"PirateStart.jpg"];
     
     JJWeapon *bluntedSword = [[JJWeapon alloc]init];
@@ -48,7 +47,6 @@
     JJTile *tile4 = [[JJTile alloc]init];
     tile4.story = @"You have found a parrot. This could be used in your armor slot. Parrots are a great defender.";
     tile4.backgroundImage =[UIImage imageNamed:@"PirateParrot.jpg"];
-    
     JJArmor *parrotArmor = [[JJArmor alloc]init];
     parrotArmor.health = 20;
     parrotArmor.name =@"Parrot";
@@ -58,7 +56,6 @@
     JJTile *tile5 = [[JJTile alloc]init];
     tile5.story = @" You have stumbled upon a cache of pirate weapons. Would you like to upgrade to a pistol?";
     tile5.backgroundImage = [UIImage imageNamed:@"PirateWeapons.jpeg"];
-    
     JJWeapon *pistolWeapon = [[JJWeapon alloc]init];
     pistolWeapon.name=@"Pistol";
     pistolWeapon.damage=17;
@@ -68,7 +65,6 @@
     
     JJTile *tile6 = [[JJTile alloc]init];
     tile6.story = @"You have been captured by the pirates and ordered to walk the plank";
-    
     tile6.backgroundImage =[UIImage imageNamed:@"PiratePlank.jpg"];
     tile6.healthEffect = -23;
     tile6.actionButtonName = @"Show no fear!";
@@ -91,9 +87,7 @@
     JJTile *tile9 = [[JJTile alloc]init];
     tile9.story = @"You've stumbled upon a pirate treasure";
     tile9.backgroundImage =[UIImage imageNamed:@"PirateTreasure.jpeg"];
-    
     tile9.healthEffect = 20;
-    
     tile9.actionButtonName = @"Take Treasure";
     
     NSMutableArray *thirdCoulmn =[[NSMutableArray alloc] initWithObjects:tile7,tile8,tile9, nil];
@@ -101,7 +95,6 @@
     JJTile *tile10 = [[JJTile alloc]init];
     tile10.story = @"A group of pirates attempy to board your ship. Fight back?";
     tile10.backgroundImage = [UIImage imageNamed:@"PirateAttack.jpg"];
-    
     tile10.healthEffect = -15;
     tile10.actionButtonName = @"Repel the invaders";
     
@@ -109,7 +102,6 @@
     tile11.story = @"In the deep sea, many things live. Will the fortune help or ruin?";
     tile11.backgroundImage = [UIImage imageNamed:@"PirateTreasurer2.jpeg"];
     tile11.healthEffect = -7 ;
-    
     tile11.actionButtonName = @"Swin Deeper";
     
     JJTile *tile12 = [[JJTile alloc]init];
@@ -119,33 +111,24 @@
     tile12.actionButtonName = @"Fight!";
     
     NSMutableArray *fourthCoulmn =[[NSMutableArray alloc] initWithObjects:tile10,tile11,tile12, nil];
-    
     NSArray *tiles = [[NSArray alloc] initWithObjects:firstColumn,secondColumn,thirdCoulmn,fourthCoulmn, nil];
     
-   
-    
     return tiles;
-
-    
 }
 
 -(JJCharacter *)character
 {
     JJCharacter *character = [[JJCharacter alloc]init];
     character.health = 100;
-    
     JJArmor *armor = [[JJArmor alloc]init];
     armor.name =@"Cloaqk";
     armor.health= 5;
-    
     character.armor = armor;
-    
     JJWeapon *weapon = [[JJWeapon alloc]init];
     weapon.name = @"Fists";
     weapon.damage = 10;
-    
     character.weapon = weapon;
-    
+
     return character;
 }
 

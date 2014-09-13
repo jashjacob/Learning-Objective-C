@@ -14,7 +14,6 @@
 
 @property (strong,nonatomic) JJArmor *armor;
 @property (strong,nonatomic) JJWeapon *weapon;
-
 @property (nonatomic) int damage;
 @property (nonatomic) int health;
 

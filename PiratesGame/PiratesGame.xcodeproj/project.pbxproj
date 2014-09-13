@@ -21,6 +21,7 @@
 		A373B63619BAD396006A314C /* PirateTreasurer2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A373B62A19BAD396006A314C /* PirateTreasurer2.jpeg */; };
 		A373B63719BAD396006A314C /* PirateWeapons.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A373B62B19BAD396006A314C /* PirateWeapons.jpeg */; };
 		A373B6BB19BAFB57006A314C /* JJTile.m in Sources */ = {isa = PBXBuildFile; fileRef = A373B6BA19BAFB57006A314C /* JJTile.m */; };
+		A3806C4119C3119A00825278 /* JJBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = A3806C4019C3119A00825278 /* JJBoss.m */; };
 		A3C27D9619BACAE0007EC557 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C27D9519BACAE0007EC557 /* Foundation.framework */; };
 		A3C27D9819BACAE0007EC557 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C27D9719BACAE0007EC557 /* CoreGraphics.framework */; };
 		A3C27D9A19BACAE0007EC557 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C27D9919BACAE0007EC557 /* UIKit.framework */; };
@@ -39,6 +40,9 @@
 		A3C27DCE19BACD41007EC557 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C27DCB19BACD41007EC557 /* Default.png */; };
 		A3C27DCF19BACD41007EC557 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C27DCC19BACD41007EC557 /* Default@2x.png */; };
 		A3C27DD519BACE2D007EC557 /* Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C27DD419BACE2D007EC557 /* Icon120.png */; };
+		A3F4824A19C2E79800AB219E /* JJWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F4824919C2E79700AB219E /* JJWeapon.m */; };
+		A3F4824D19C2E7DE00AB219E /* JJArmor.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F4824C19C2E7DE00AB219E /* JJArmor.m */; };
+		A3F4825019C2E87300AB219E /* JJCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F4824F19C2E87300AB219E /* JJCharacter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,8 @@
 		A373B62B19BAD396006A314C /* PirateWeapons.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PirateWeapons.jpeg; sourceTree = "<group>"; };
 		A373B6B919BAFB57006A314C /* JJTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTile.h; sourceTree = "<group>"; };
 		A373B6BA19BAFB57006A314C /* JJTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTile.m; sourceTree = "<group>"; };
+		A3806C3F19C3119A00825278 /* JJBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJBoss.h; sourceTree = "<group>"; };
+		A3806C4019C3119A00825278 /* JJBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJBoss.m; sourceTree = "<group>"; };
 		A3C27D9219BACAE0007EC557 /* PiratesGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiratesGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C27D9519BACAE0007EC557 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A3C27D9719BACAE0007EC557 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +97,12 @@
 		A3C27DCB19BACD41007EC557 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A3C27DCC19BACD41007EC557 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A3C27DD419BACE2D007EC557 /* Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120.png; sourceTree = "<group>"; };
+		A3F4824819C2E79700AB219E /* JJWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJWeapon.h; sourceTree = "<group>"; };
+		A3F4824919C2E79700AB219E /* JJWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJWeapon.m; sourceTree = "<group>"; };
+		A3F4824B19C2E7DE00AB219E /* JJArmor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJArmor.h; sourceTree = "<group>"; };
+		A3F4824C19C2E7DE00AB219E /* JJArmor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJArmor.m; sourceTree = "<group>"; };
+		A3F4824E19C2E87300AB219E /* JJCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCharacter.h; sourceTree = "<group>"; };
+		A3F4824F19C2E87300AB219E /* JJCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +163,14 @@
 				A363F0F419BB408800E8F85A /* Factory */,
 				A373B6B919BAFB57006A314C /* JJTile.h */,
 				A373B6BA19BAFB57006A314C /* JJTile.m */,
+				A3F4824819C2E79700AB219E /* JJWeapon.h */,
+				A3F4824919C2E79700AB219E /* JJWeapon.m */,
+				A3F4824B19C2E7DE00AB219E /* JJArmor.h */,
+				A3F4824C19C2E7DE00AB219E /* JJArmor.m */,
+				A3F4824E19C2E87300AB219E /* JJCharacter.h */,
+				A3F4824F19C2E87300AB219E /* JJCharacter.m */,
+				A3806C3F19C3119A00825278 /* JJBoss.h */,
+				A3806C4019C3119A00825278 /* JJBoss.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -349,10 +369,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3C27DA619BACAE0007EC557 /* JJAppDelegate.m in Sources */,
+				A3F4825019C2E87300AB219E /* JJCharacter.m in Sources */,
+				A3F4824D19C2E7DE00AB219E /* JJArmor.m in Sources */,
+				A3F4824A19C2E79800AB219E /* JJWeapon.m in Sources */,
 				A373B6BB19BAFB57006A314C /* JJTile.m in Sources */,
 				A3C27DAC19BACAE0007EC557 /* JJViewController.m in Sources */,
 				A363F0F319BB407C00E8F85A /* JJFactory.m in Sources */,
 				A3C27DA219BACAE0007EC557 /* main.m in Sources */,
+				A3806C4119C3119A00825278 /* JJBoss.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
