@@ -43,21 +43,22 @@
 - (IBAction)actionButtonPressed:(UIButton *)sender {
     JJTile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
     
-    if(tile.healthEffect == -15){
+    if(tile.healthEffect == -15)
+    {
         self.boss.health = self.boss.health - self.character.damage;
     }
+    
     [self updateCharacterStatsForArmor:tile.armor withWeapons:tile.weapon withHealtheffect:tile.healthEffect];
     [self updateTile];
     
     if(self.character.health <=0)
     {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Death Message" message:@"You have died please restart the game!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Death Message" message:@"You have died! Please restart the game!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         [alertView show];
         
     }else if(self.boss.health <=0)
     {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Victory Message" message:@"You have defeated the boss!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-                                
         [alertView show];
     }
 
@@ -67,21 +68,18 @@
     self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y+1);
     [self updateButtons]; // to hide or unhide the buttons with the possible movements
     [self updateTile]; // to update the tileModel with the story of the respective tile
-    
 }
 
 - (IBAction)westButtonPressed:(UIButton *)sender {
     self.currentPoint = CGPointMake(self.currentPoint.x - 1, self.currentPoint.y);
     [self updateButtons];
     [self updateTile];
-    
 }
 
 - (IBAction)southButtonPressed:(UIButton *)sender {
     self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y - 1);
     [self updateButtons];
     [self updateTile];
-    
 }
 
 - (IBAction)eastButtonPressed:(UIButton *)sender {
@@ -128,7 +126,9 @@
     if(point.y >= 0 && point.x >= 0 && point.x < [self.tiles count] && point.y < [[self.tiles objectAtIndex:point.x] count])
     {
         return NO;
-    }else{
+    }
+    else
+    {
         return YES;
     }
 
