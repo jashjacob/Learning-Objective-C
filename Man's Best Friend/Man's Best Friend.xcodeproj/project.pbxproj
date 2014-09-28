@@ -137,10 +137,7 @@
 				A31E227519A8C6AE00C92EEB /* Main.storyboard */,
 				A31E227819A8C6AE00C92EEB /* JJViewController.h */,
 				A31E227919A8C6AE00C92EEB /* JJViewController.m */,
-				A31E229819A8C80400C92EEB /* JJDog.h */,
-				A31E229919A8C80400C92EEB /* JJDog.m */,
-				A39592F219B5C8D200FF3023 /* JJPuppy.h */,
-				A39592F319B5C8D200FF3023 /* JJPuppy.m */,
+				A3A90B5F19D83922005567D3 /* Model */,
 				A31E227B19A8C6AE00C92EEB /* Images.xcassets */,
 				A31E226A19A8C6AE00C92EEB /* Supporting Files */,
 			);
@@ -151,12 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				A3F4824619C2951600AB219E /* owner.jpg */,
+				A3A90B6019D8393F005567D3 /* Dog Pictures */,
 				A3F4824419C28E2600AB219E /* Icon120.png */,
-				A3F4823A19C287CB00AB219E /* dog-1.png */,
-				A3F4823B19C287CB00AB219E /* dog-2.png */,
-				A3F4823C19C287CC00AB219E /* dog-3.png */,
-				A3F4823D19C287CC00AB219E /* dog-4.png */,
-				A3F4823E19C287CC00AB219E /* dog-5.png */,
 				A31E226B19A8C6AE00C92EEB /* Man's Best Friend-Info.plist */,
 				A31E226C19A8C6AE00C92EEB /* InfoPlist.strings */,
 				A31E226F19A8C6AE00C92EEB /* main.m */,
@@ -181,6 +174,29 @@
 				A31E228B19A8C6AE00C92EEB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3A90B5F19D83922005567D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A31E229819A8C80400C92EEB /* JJDog.h */,
+				A31E229919A8C80400C92EEB /* JJDog.m */,
+				A39592F219B5C8D200FF3023 /* JJPuppy.h */,
+				A39592F319B5C8D200FF3023 /* JJPuppy.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A3A90B6019D8393F005567D3 /* Dog Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				A3F4823A19C287CB00AB219E /* dog-1.png */,
+				A3F4823B19C287CB00AB219E /* dog-2.png */,
+				A3F4823C19C287CC00AB219E /* dog-3.png */,
+				A3F4823D19C287CC00AB219E /* dog-4.png */,
+				A3F4823E19C287CC00AB219E /* dog-5.png */,
+			);
+			name = "Dog Pictures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
