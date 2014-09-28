@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8478AF09-B98E-4918-B382-1FED4973BF15</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TimeAfterTime</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8632A897-40D2-4268-A810-2A946BD6A529</key>
+		<string>https://github.com/jashjacob/Learning-Objective-C.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TimeAfterTime/TimeAfterTime.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8632A897-40D2-4268-A810-2A946BD6A529</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jashjacob/Learning-Objective-C.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8632A897-40D2-4268-A810-2A946BD6A529</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8632A897-40D2-4268-A810-2A946BD6A529</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Learning-Objective-C</string>
+		</dict>
+	</array>
+</dict>
+</plist>
