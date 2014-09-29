@@ -56,7 +56,8 @@
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Death Message" message:@"You have died! Please restart the game!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         [alertView show];
         
-    }else if(self.boss.health <=0)
+    }
+    else if(self.boss.health <=0)
     {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Victory Message" message:@"You have defeated the boss!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         [alertView show];
@@ -97,20 +98,31 @@
 
 
 #pragma mark - Helper Methods
+
 -(void)updateTile
 {
-    JJTile *tileModel = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
-    self.storyLabel.text = tileModel.story;
-    self.backgroundImageView.image = tileModel.backgroundImage;
+    //update the UI - story, background image, health,damage, armor and weapon
     
-    self.healthLabel.text = [NSString stringWithFormat:@"%i", self.character.health]; //to display the integer in a text label
-    self.damageLabel.text = [NSString stringWithFormat:@"%i", self.character.damage];
+    if(self.character.health <=0)
+    {   //giving the option to reset once dead, rest of the buttons are disabled
+        self.storyLabel.text = @"You Died! GAME OVER!";
+        self.actionButton.enabled = false;
+        self.northButton.enabled = self.southButton.enabled = self.eastButton.enabled = self.westButton.enabled = false;
+        self.healthLabel.text = @"DEAD";
+    }
+    else
+    {
+        JJTile *tileModel = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
     
-    self.armorLabel.text = self.character.armor.name;
-    self.weaponLabel.text = self.character.weapon.name;
-    
-    [self.actionButton setTitle:tileModel.actionButtonName forState:UIControlStateNormal];
-    
+        self.storyLabel.text = tileModel.story;
+        self.backgroundImageView.image = tileModel.backgroundImage;
+        self.healthLabel.text = [NSString stringWithFormat:@"%i", self.character.health]; //to display the integer in a text label
+        self.damageLabel.text = [NSString stringWithFormat:@"%i", self.character.damage];
+        self.armorLabel.text = self.character.armor.name;
+        self.weaponLabel.text = self.character.weapon.name;
+
+        [self.actionButton setTitle:tileModel.actionButtonName forState:UIControlStateNormal];
+    }
 }
 
 -(void)updateButtons
@@ -131,7 +143,6 @@
     {
         return YES;
     }
-
 }
 
 -(void)updateCharacterStatsForArmor:(JJArmor *)armor withWeapons:(JJWeapon *)weapon withHealtheffect:(int)healthEffect
