@@ -26,6 +26,7 @@
     self.character = [factory character]; // factory character returns the character set for the first time
     self.boss = [factory boss];
     self.currentPoint = CGPointMake(0,0);
+    
     [self updateCharacterStatsForArmor:nil withWeapons:nil withHealtheffect:0];
     [self updateTile];
     [self updateButtons];
@@ -41,6 +42,7 @@
 #pragma mark - IBAction
 
 - (IBAction)actionButtonPressed:(UIButton *)sender {
+    
     JJTile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
     
     if(tile.healthEffect == -15)
@@ -51,19 +53,19 @@
     [self updateCharacterStatsForArmor:tile.armor withWeapons:tile.weapon withHealtheffect:tile.healthEffect];
     [self updateTile];
     
-    if(self.character.health <=0)
+    if(self.character.health <=0) //alerting the user when the character has died
     {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Death Message" message:@"You have died! Please restart the game!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         [alertView show];
         
     }
-    else if(self.boss.health <=0)
+    else if(self.boss.health <=0) //alerting the user when the boss has died
     {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Victory Message" message:@"You have defeated the boss!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         [alertView show];
     }
-
 }
+
 
 - (IBAction)northButtonPressed:(UIButton *)sender {
     self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y+1);
@@ -72,18 +74,21 @@
 }
 
 - (IBAction)westButtonPressed:(UIButton *)sender {
+    
     self.currentPoint = CGPointMake(self.currentPoint.x - 1, self.currentPoint.y);
     [self updateButtons];
     [self updateTile];
 }
 
 - (IBAction)southButtonPressed:(UIButton *)sender {
+    
     self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y - 1);
     [self updateButtons];
     [self updateTile];
 }
 
 - (IBAction)eastButtonPressed:(UIButton *)sender {
+    
     self.currentPoint = CGPointMake(self.currentPoint.x + 1, self.currentPoint.y);
     [self updateButtons];
     [self updateTile];
@@ -105,10 +110,19 @@
     
     if(self.character.health <=0)
     {   //giving the option to reset once dead, rest of the buttons are disabled
+        
         self.storyLabel.text = @"You Died! GAME OVER!";
         self.actionButton.enabled = false;
-        self.northButton.enabled = self.southButton.enabled = self.eastButton.enabled = self.westButton.enabled = false;
+        self.northButton.hidden = self.southButton.hidden = self.eastButton.hidden = self.westButton.hidden = true;
         self.healthLabel.text = @"DEAD";
+        [self.actionButton setTitle:@"Start the game over" forState:UIControlStateNormal];
+    }
+    else if(self.boss.health<=0)
+    {
+        self.storyLabel.text =@"You have won the game!!";
+        self.actionButton.enabled = false;
+        self.northButton.hidden = self.southButton.hidden = self.eastButton.hidden = self.westButton.hidden = true;
+        [self.actionButton setTitle:@"Start the game over" forState:UIControlStateNormal];
     }
     else
     {
@@ -147,19 +161,22 @@
 
 -(void)updateCharacterStatsForArmor:(JJArmor *)armor withWeapons:(JJWeapon *)weapon withHealtheffect:(int)healthEffect
 {
-    if(armor != nil){
+    if(armor != nil)
+    {
         self.character.health = self.character.health - self.character.armor.health + armor.health;
         self.character.armor = armor;
     }
-    else if(weapon !=nil){
+    else if(weapon != nil)
+    {
         self.character.damage = self.character.damage - self.character.weapon.damage + weapon.damage;
         self.character.weapon = weapon;
     }
-    else if(healthEffect !=0)
+    else if(healthEffect != 0)
     {
         self.character.health = self.character.health + healthEffect;
     }
-    else{
+    else
+    {
         self.character.health = self.character.health + self.character.armor.health;
         self.character.damage = self.character.damage + self.character.weapon.damage;
     }

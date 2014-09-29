@@ -31,7 +31,7 @@
     steelArmor.name = @"Steel Armor";
     steelArmor.health = 25;
     tile2.armor = steelArmor;
-    tile2.actionButtonName = @"Take Armor!";
+    tile2.actionButtonName = @"Take Steel Armor!";
     
     JJTile *tile3 = [[JJTile alloc]init];
     tile3.story = @"A mysterious dock appears in the horizon. Should we stop and ask for directions ?";
@@ -72,20 +72,20 @@
     NSMutableArray *secondColumn = [[NSMutableArray alloc] initWithObjects:tile4,tile5,tile6, nil];
     
     JJTile *tile7 = [[JJTile alloc]init];
-    tile7.story = @"You have sighted a pirate battle off the coast. Should we intervene? ";
+    tile7.story = @"You have sighted a pirate battle off the coast. Do you want to battle? ";
     tile7.backgroundImage = [UIImage imageNamed:@"PirateShipBattle.jpeg"];
     tile7.healthEffect = 8;
     tile7.actionButtonName = @"Fight those scums!!";
     
     JJTile *tile8 = [[JJTile alloc]init];
-    tile8.story = @"The legends of the deep, Mighty Kraken appears!!";
+    tile8.story = @"The legends of the deep, Mighty Kraken appears!! BEWARE!";
     tile8.backgroundImage = [UIImage imageNamed:@"PirateOctopusAttack.jpg"];
     tile8.healthEffect = -48;
     tile8.actionButtonName = @"Abandon Ship!";
     
     
     JJTile *tile9 = [[JJTile alloc]init];
-    tile9.story = @"You've stumbled upon a pirate treasure.";
+    tile9.story = @"You've stumbled upon a pirate treasure. The treasure may hold untold riches.";
     tile9.backgroundImage =[UIImage imageNamed:@"PirateTreasure.jpeg"];
     tile9.healthEffect = 10;
     tile9.actionButtonName = @"Take Treasure!";
@@ -111,6 +111,7 @@
     tile12.actionButtonName = @"Fight!";
     
     NSMutableArray *fourthCoulmn =[[NSMutableArray alloc] initWithObjects:tile10,tile11,tile12, nil];
+    
     NSArray *tiles = [[NSArray alloc] initWithObjects:firstColumn,secondColumn,thirdCoulmn,fourthCoulmn, nil];
     
     return tiles;
@@ -125,7 +126,7 @@
     armor.health= 5;
     character.armor = armor;
     JJWeapon *weapon = [[JJWeapon alloc]init];
-    weapon.name = @"Fists";
+    weapon.name = @"Fists of Fury";
     weapon.damage = 10;
     character.weapon = weapon;
 
