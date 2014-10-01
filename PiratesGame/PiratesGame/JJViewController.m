@@ -115,6 +115,7 @@
         self.actionButton.enabled = false;
         self.northButton.hidden = self.southButton.hidden = self.eastButton.hidden = self.westButton.hidden = true;
         self.healthLabel.text = @"DEAD";
+        
         [self.actionButton setTitle:@"Start the game over" forState:UIControlStateNormal];
     }
     else if(self.boss.health<=0)
@@ -127,7 +128,7 @@
     else
     {
         JJTile *tileModel = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
-    
+        self.actionButton.enabled = true;
         self.storyLabel.text = tileModel.story;
         self.backgroundImageView.image = tileModel.backgroundImage;
         self.healthLabel.text = [NSString stringWithFormat:@"%i", self.character.health]; //to display the integer in a text label
