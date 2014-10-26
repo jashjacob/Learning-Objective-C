@@ -44,19 +44,20 @@
     NSString *planet8= @"Neptune";
     
     self.planets = [[NSMutableArray alloc]initWithObjects:planet1,planet2,planet3,planet4,planet5,planet6,planet7,planet8, nil];
+
     
-    NSMutableDictionary *myDictonary = [[NSMutableDictionary alloc]init];
-    
-    NSString *firstColor = @"red";
-    
-    [myDictonary setObject:firstColor forKey:@"FireTruck Color"]; //setting object using for the key "FireTruck Color"
-    [myDictonary setObject:@"blue" forKey:@"Ocean Color"];
-    [myDictonary setObject:@"Yellow" forKey:@"Star Color"];
-    
-    NSLog(@"%@", myDictonary);
-    
-    NSString *blueString = [myDictonary objectForKey:@"Ocean Color"]; // will return the object keyname
-    NSLog(@"%@", blueString);
+//    NSMutableDictionary *myDictonary = [[NSMutableDictionary alloc]init];
+//    
+//    NSString *firstColor = @"red";
+//    
+//    [myDictonary setObject:firstColor forKey:@"FireTruck Color"]; //setting object using for the key "FireTruck Color"
+//    [myDictonary setObject:@"blue" forKey:@"Ocean Color"];
+//    [myDictonary setObject:@"Yellow" forKey:@"Star Color"];
+//    
+//    NSLog(@"%@", myDictonary);
+//    
+//    NSString *blueString = [myDictonary objectForKey:@"Ocean Color"]; // will return the object keyname
+//    NSLog(@"%@", blueString);
 }
 
 - (void)didReceiveMemoryWarning

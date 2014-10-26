@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A336CD7E19D919D80004B4EF /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = A336CD7D19D919D80004B4EF /* AstronomicalData.m */; };
 		A3395AB919D8521000C64D52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3395AB819D8521000C64D52 /* Foundation.framework */; };
 		A3395ABB19D8521000C64D52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3395ABA19D8521000C64D52 /* CoreGraphics.framework */; };
 		A3395ABD19D8521000C64D52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3395ABC19D8521000C64D52 /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A336CD7C19D919D80004B4EF /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalData.h; sourceTree = "<group>"; };
+		A336CD7D19D919D80004B4EF /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
 		A3395AB519D8521000C64D52 /* Awesome World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3395AB819D8521000C64D52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A3395ABA19D8521000C64D52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 				A3395ACA19D8521100C64D52 /* Main.storyboard */,
 				A3395B0719D85DA600C64D52 /* AwesomeWorldViewController.h */,
 				A3395B0819D85DA600C64D52 /* AwesomeWorldViewController.m */,
+				A336CD7C19D919D80004B4EF /* AstronomicalData.h */,
+				A336CD7D19D919D80004B4EF /* AstronomicalData.m */,
 				A3395AD019D8521100C64D52 /* Images.xcassets */,
 				A3395ABF19D8521000C64D52 /* Supporting Files */,
 			);
@@ -253,6 +258,7 @@
 				A3395B0919D85DA600C64D52 /* AwesomeWorldViewController.m in Sources */,
 				A3395AC919D8521100C64D52 /* JJAppDelegate.m in Sources */,
 				A3395AC519D8521100C64D52 /* main.m in Sources */,
+				A336CD7E19D919D80004B4EF /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
