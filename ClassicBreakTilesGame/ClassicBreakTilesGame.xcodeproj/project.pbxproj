@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A30096D11A0CE4FC00E5A17D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30096D01A0CE4FC00E5A17D /* Foundation.framework */; };
+		A30096D31A0CE4FC00E5A17D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30096D21A0CE4FC00E5A17D /* CoreGraphics.framework */; };
+		A30096D51A0CE4FC00E5A17D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30096D41A0CE4FC00E5A17D /* UIKit.framework */; };
+		A30096D71A0CE4FC00E5A17D /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30096D61A0CE4FC00E5A17D /* SpriteKit.framework */; };
+		A30096DD1A0CE4FC00E5A17D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A30096DB1A0CE4FC00E5A17D /* InfoPlist.strings */; };
+		A30096DF1A0CE4FC00E5A17D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A30096DE1A0CE4FC00E5A17D /* main.m */; };
+		A30096E31A0CE4FC00E5A17D /* JJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A30096E21A0CE4FC00E5A17D /* JJAppDelegate.m */; };
+		A30096E61A0CE4FC00E5A17D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30096E41A0CE4FC00E5A17D /* Main.storyboard */; };
+		A30096E91A0CE4FC00E5A17D /* JJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A30096E81A0CE4FC00E5A17D /* JJViewController.m */; };
+		A30096EC1A0CE4FC00E5A17D /* JJMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A30096EB1A0CE4FC00E5A17D /* JJMyScene.m */; };
+		A30096F01A0CE4FC00E5A17D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30096EF1A0CE4FC00E5A17D /* Images.xcassets */; };
+		A30096F71A0CE4FC00E5A17D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30096F61A0CE4FC00E5A17D /* XCTest.framework */; };
+		A30096F81A0CE4FC00E5A17D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30096D01A0CE4FC00E5A17D /* Foundation.framework */; };
+		A30096F91A0CE4FC00E5A17D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30096D41A0CE4FC00E5A17D /* UIKit.framework */; };
+		A30097011A0CE4FC00E5A17D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A30096FF1A0CE4FC00E5A17D /* InfoPlist.strings */; };
+		A30097031A0CE4FC00E5A17D /* ClassicBreakTilesGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A30097021A0CE4FC00E5A17D /* ClassicBreakTilesGameTests.m */; };
+		A30097101A0CE52300E5A17D /* brick.png in Resources */ = {isa = PBXBuildFile; fileRef = A300970C1A0CE52300E5A17D /* brick.png */; };
+		A30097111A0CE52300E5A17D /* brick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A300970D1A0CE52300E5A17D /* brick@2x.png */; };
+		A30097121A0CE52300E5A17D /* paddle.png in Resources */ = {isa = PBXBuildFile; fileRef = A300970E1A0CE52300E5A17D /* paddle.png */; };
+		A30097131A0CE52300E5A17D /* paddle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A300970F1A0CE52300E5A17D /* paddle@2x.png */; };
+		A30097161A0CE52C00E5A17D /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = A30097141A0CE52C00E5A17D /* ball.png */; };
+		A30097171A0CE52C00E5A17D /* ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A30097151A0CE52C00E5A17D /* ball@2x.png */; };
+		A3ED93621A0E448200D3A205 /* blip.caf in Resources */ = {isa = PBXBuildFile; fileRef = A3ED935F1A0E448200D3A205 /* blip.caf */; };
+		A3ED93631A0E448200D3A205 /* brickhit.caf in Resources */ = {isa = PBXBuildFile; fileRef = A3ED93601A0E448200D3A205 /* brickhit.caf */; };
+		A3ED93641A0E448200D3A205 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = A3ED93611A0E448200D3A205 /* gameover.caf */; };
+		A3ED936D1A0E4B9600D3A205 /* JJEndScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ED936C1A0E4B9600D3A205 /* JJEndScene.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A30096FA1A0CE4FC00E5A17D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A30096C51A0CE4FC00E5A17D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A30096CC1A0CE4FC00E5A17D;
+			remoteInfo = ClassicBreakTilesGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A30096CD1A0CE4FC00E5A17D /* ClassicBreakTilesGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassicBreakTilesGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30096D01A0CE4FC00E5A17D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A30096D21A0CE4FC00E5A17D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A30096D41A0CE4FC00E5A17D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A30096D61A0CE4FC00E5A17D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		A30096DA1A0CE4FC00E5A17D /* ClassicBreakTilesGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClassicBreakTilesGame-Info.plist"; sourceTree = "<group>"; };
+		A30096DC1A0CE4FC00E5A17D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A30096DE1A0CE4FC00E5A17D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A30096E01A0CE4FC00E5A17D /* ClassicBreakTilesGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClassicBreakTilesGame-Prefix.pch"; sourceTree = "<group>"; };
+		A30096E11A0CE4FC00E5A17D /* JJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJAppDelegate.h; sourceTree = "<group>"; };
+		A30096E21A0CE4FC00E5A17D /* JJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJAppDelegate.m; sourceTree = "<group>"; };
+		A30096E51A0CE4FC00E5A17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A30096E71A0CE4FC00E5A17D /* JJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJViewController.h; sourceTree = "<group>"; };
+		A30096E81A0CE4FC00E5A17D /* JJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJViewController.m; sourceTree = "<group>"; };
+		A30096EA1A0CE4FC00E5A17D /* JJMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJMyScene.h; sourceTree = "<group>"; };
+		A30096EB1A0CE4FC00E5A17D /* JJMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJMyScene.m; sourceTree = "<group>"; };
+		A30096EF1A0CE4FC00E5A17D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A30096F51A0CE4FC00E5A17D /* ClassicBreakTilesGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassicBreakTilesGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30096F61A0CE4FC00E5A17D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A30096FE1A0CE4FC00E5A17D /* ClassicBreakTilesGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClassicBreakTilesGameTests-Info.plist"; sourceTree = "<group>"; };
+		A30097001A0CE4FC00E5A17D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A30097021A0CE4FC00E5A17D /* ClassicBreakTilesGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassicBreakTilesGameTests.m; sourceTree = "<group>"; };
+		A300970C1A0CE52300E5A17D /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick.png; sourceTree = "<group>"; };
+		A300970D1A0CE52300E5A17D /* brick@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brick@2x.png"; sourceTree = "<group>"; };
+		A300970E1A0CE52300E5A17D /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
+		A300970F1A0CE52300E5A17D /* paddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paddle@2x.png"; sourceTree = "<group>"; };
+		A30097141A0CE52C00E5A17D /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		A30097151A0CE52C00E5A17D /* ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball@2x.png"; sourceTree = "<group>"; };
+		A3ED935F1A0E448200D3A205 /* blip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blip.caf; sourceTree = "<group>"; };
+		A3ED93601A0E448200D3A205 /* brickhit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = brickhit.caf; sourceTree = "<group>"; };
+		A3ED93611A0E448200D3A205 /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.caf; sourceTree = "<group>"; };
+		A3ED936B1A0E4B9600D3A205 /* JJEndScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJEndScene.h; sourceTree = "<group>"; };
+		A3ED936C1A0E4B9600D3A205 /* JJEndScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJEndScene.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30096CA1A0CE4FC00E5A17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30096D31A0CE4FC00E5A17D /* CoreGraphics.framework in Frameworks */,
+				A30096D51A0CE4FC00E5A17D /* UIKit.framework in Frameworks */,
+				A30096D71A0CE4FC00E5A17D /* SpriteKit.framework in Frameworks */,
+				A30096D11A0CE4FC00E5A17D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30096F21A0CE4FC00E5A17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30096F71A0CE4FC00E5A17D /* XCTest.framework in Frameworks */,
+				A30096F91A0CE4FC00E5A17D /* UIKit.framework in Frameworks */,
+				A30096F81A0CE4FC00E5A17D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A30096C41A0CE4FC00E5A17D = {
+			isa = PBXGroup;
+			children = (
+				A30096D81A0CE4FC00E5A17D /* ClassicBreakTilesGame */,
+				A30096FC1A0CE4FC00E5A17D /* ClassicBreakTilesGameTests */,
+				A30096CF1A0CE4FC00E5A17D /* Frameworks */,
+				A30096CE1A0CE4FC00E5A17D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A30096CE1A0CE4FC00E5A17D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A30096CD1A0CE4FC00E5A17D /* ClassicBreakTilesGame.app */,
+				A30096F51A0CE4FC00E5A17D /* ClassicBreakTilesGameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A30096CF1A0CE4FC00E5A17D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A30096D01A0CE4FC00E5A17D /* Foundation.framework */,
+				A30096D21A0CE4FC00E5A17D /* CoreGraphics.framework */,
+				A30096D41A0CE4FC00E5A17D /* UIKit.framework */,
+				A30096D61A0CE4FC00E5A17D /* SpriteKit.framework */,
+				A30096F61A0CE4FC00E5A17D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A30096D81A0CE4FC00E5A17D /* ClassicBreakTilesGame */ = {
+			isa = PBXGroup;
+			children = (
+				A30096E11A0CE4FC00E5A17D /* JJAppDelegate.h */,
+				A30096E21A0CE4FC00E5A17D /* JJAppDelegate.m */,
+				A30096E41A0CE4FC00E5A17D /* Main.storyboard */,
+				A30096E71A0CE4FC00E5A17D /* JJViewController.h */,
+				A30096E81A0CE4FC00E5A17D /* JJViewController.m */,
+				A30096EA1A0CE4FC00E5A17D /* JJMyScene.h */,
+				A30096EB1A0CE4FC00E5A17D /* JJMyScene.m */,
+				A3ED936B1A0E4B9600D3A205 /* JJEndScene.h */,
+				A3ED936C1A0E4B9600D3A205 /* JJEndScene.m */,
+				A30096EF1A0CE4FC00E5A17D /* Images.xcassets */,
+				A30096D91A0CE4FC00E5A17D /* Supporting Files */,
+			);
+			path = ClassicBreakTilesGame;
+			sourceTree = "<group>";
+		};
+		A30096D91A0CE4FC00E5A17D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3ED935F1A0E448200D3A205 /* blip.caf */,
+				A3ED93601A0E448200D3A205 /* brickhit.caf */,
+				A3ED93611A0E448200D3A205 /* gameover.caf */,
+				A30097141A0CE52C00E5A17D /* ball.png */,
+				A30097151A0CE52C00E5A17D /* ball@2x.png */,
+				A300970C1A0CE52300E5A17D /* brick.png */,
+				A300970D1A0CE52300E5A17D /* brick@2x.png */,
+				A300970E1A0CE52300E5A17D /* paddle.png */,
+				A300970F1A0CE52300E5A17D /* paddle@2x.png */,
+				A30096DA1A0CE4FC00E5A17D /* ClassicBreakTilesGame-Info.plist */,
+				A30096DB1A0CE4FC00E5A17D /* InfoPlist.strings */,
+				A30096DE1A0CE4FC00E5A17D /* main.m */,
+				A30096E01A0CE4FC00E5A17D /* ClassicBreakTilesGame-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A30096FC1A0CE4FC00E5A17D /* ClassicBreakTilesGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				A30097021A0CE4FC00E5A17D /* ClassicBreakTilesGameTests.m */,
+				A30096FD1A0CE4FC00E5A17D /* Supporting Files */,
+			);
+			path = ClassicBreakTilesGameTests;
+			sourceTree = "<group>";
+		};
+		A30096FD1A0CE4FC00E5A17D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A30096FE1A0CE4FC00E5A17D /* ClassicBreakTilesGameTests-Info.plist */,
+				A30096FF1A0CE4FC00E5A17D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A30096CC1A0CE4FC00E5A17D /* ClassicBreakTilesGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A30097061A0CE4FC00E5A17D /* Build configuration list for PBXNativeTarget "ClassicBreakTilesGame" */;
+			buildPhases = (
+				A30096C91A0CE4FC00E5A17D /* Sources */,
+				A30096CA1A0CE4FC00E5A17D /* Frameworks */,
+				A30096CB1A0CE4FC00E5A17D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClassicBreakTilesGame;
+			productName = ClassicBreakTilesGame;
+			productReference = A30096CD1A0CE4FC00E5A17D /* ClassicBreakTilesGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A30096F41A0CE4FC00E5A17D /* ClassicBreakTilesGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A30097091A0CE4FC00E5A17D /* Build configuration list for PBXNativeTarget "ClassicBreakTilesGameTests" */;
+			buildPhases = (
+				A30096F11A0CE4FC00E5A17D /* Sources */,
+				A30096F21A0CE4FC00E5A17D /* Frameworks */,
+				A30096F31A0CE4FC00E5A17D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A30096FB1A0CE4FC00E5A17D /* PBXTargetDependency */,
+			);
+			name = ClassicBreakTilesGameTests;
+			productName = ClassicBreakTilesGameTests;
+			productReference = A30096F51A0CE4FC00E5A17D /* ClassicBreakTilesGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A30096C51A0CE4FC00E5A17D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JJ;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Techzei;
+				TargetAttributes = {
+					A30096F41A0CE4FC00E5A17D = {
+						TestTargetID = A30096CC1A0CE4FC00E5A17D;
+					};
+				};
+			};
+			buildConfigurationList = A30096C81A0CE4FC00E5A17D /* Build configuration list for PBXProject "ClassicBreakTilesGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A30096C41A0CE4FC00E5A17D;
+			productRefGroup = A30096CE1A0CE4FC00E5A17D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A30096CC1A0CE4FC00E5A17D /* ClassicBreakTilesGame */,
+				A30096F41A0CE4FC00E5A17D /* ClassicBreakTilesGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A30096CB1A0CE4FC00E5A17D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30096DD1A0CE4FC00E5A17D /* InfoPlist.strings in Resources */,
+				A30096F01A0CE4FC00E5A17D /* Images.xcassets in Resources */,
+				A3ED93621A0E448200D3A205 /* blip.caf in Resources */,
+				A30097161A0CE52C00E5A17D /* ball.png in Resources */,
+				A30096E61A0CE4FC00E5A17D /* Main.storyboard in Resources */,
+				A3ED93641A0E448200D3A205 /* gameover.caf in Resources */,
+				A30097131A0CE52300E5A17D /* paddle@2x.png in Resources */,
+				A30097111A0CE52300E5A17D /* brick@2x.png in Resources */,
+				A3ED93631A0E448200D3A205 /* brickhit.caf in Resources */,
+				A30097171A0CE52C00E5A17D /* ball@2x.png in Resources */,
+				A30097121A0CE52300E5A17D /* paddle.png in Resources */,
+				A30097101A0CE52300E5A17D /* brick.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30096F31A0CE4FC00E5A17D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30097011A0CE4FC00E5A17D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A30096C91A0CE4FC00E5A17D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30096E31A0CE4FC00E5A17D /* JJAppDelegate.m in Sources */,
+				A30096E91A0CE4FC00E5A17D /* JJViewController.m in Sources */,
+				A30096EC1A0CE4FC00E5A17D /* JJMyScene.m in Sources */,
+				A30096DF1A0CE4FC00E5A17D /* main.m in Sources */,
+				A3ED936D1A0E4B9600D3A205 /* JJEndScene.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30096F11A0CE4FC00E5A17D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30097031A0CE4FC00E5A17D /* ClassicBreakTilesGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A30096FB1A0CE4FC00E5A17D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A30096CC1A0CE4FC00E5A17D /* ClassicBreakTilesGame */;
+			targetProxy = A30096FA1A0CE4FC00E5A17D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A30096DB1A0CE4FC00E5A17D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A30096DC1A0CE4FC00E5A17D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A30096E41A0CE4FC00E5A17D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A30096E51A0CE4FC00E5A17D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A30096FF1A0CE4FC00E5A17D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A30097001A0CE4FC00E5A17D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A30097041A0CE4FC00E5A17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A30097051A0CE4FC00E5A17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A30097071A0CE4FC00E5A17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ClassicBreakTilesGame/ClassicBreakTilesGame-Prefix.pch";
+				INFOPLIST_FILE = "ClassicBreakTilesGame/ClassicBreakTilesGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A30097081A0CE4FC00E5A17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ClassicBreakTilesGame/ClassicBreakTilesGame-Prefix.pch";
+				INFOPLIST_FILE = "ClassicBreakTilesGame/ClassicBreakTilesGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A300970A1A0CE4FC00E5A17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ClassicBreakTilesGame.app/ClassicBreakTilesGame";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ClassicBreakTilesGame/ClassicBreakTilesGame-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ClassicBreakTilesGameTests/ClassicBreakTilesGameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A300970B1A0CE4FC00E5A17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ClassicBreakTilesGame.app/ClassicBreakTilesGame";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ClassicBreakTilesGame/ClassicBreakTilesGame-Prefix.pch";
+				INFOPLIST_FILE = "ClassicBreakTilesGameTests/ClassicBreakTilesGameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A30096C81A0CE4FC00E5A17D /* Build configuration list for PBXProject "ClassicBreakTilesGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30097041A0CE4FC00E5A17D /* Debug */,
+				A30097051A0CE4FC00E5A17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A30097061A0CE4FC00E5A17D /* Build configuration list for PBXNativeTarget "ClassicBreakTilesGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30097071A0CE4FC00E5A17D /* Debug */,
+				A30097081A0CE4FC00E5A17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A30097091A0CE4FC00E5A17D /* Build configuration list for PBXNativeTarget "ClassicBreakTilesGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A300970A1A0CE4FC00E5A17D /* Debug */,
+				A300970B1A0CE4FC00E5A17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A30096C51A0CE4FC00E5A17D /* Project object */;
+}
