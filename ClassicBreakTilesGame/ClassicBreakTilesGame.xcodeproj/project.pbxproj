@@ -150,6 +150,8 @@
 				A3ED936B1A0E4B9600D3A205 /* JJEndScene.h */,
 				A3ED936C1A0E4B9600D3A205 /* JJEndScene.m */,
 				A30096EF1A0CE4FC00E5A17D /* Images.xcassets */,
+				A3B5CDE81A0F7BE0008407B1 /* Image Resources */,
+				A3B5CDE71A0F7BC9008407B1 /* Audio Resources */,
 				A30096D91A0CE4FC00E5A17D /* Supporting Files */,
 			);
 			path = ClassicBreakTilesGame;
@@ -158,15 +160,6 @@
 		A30096D91A0CE4FC00E5A17D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A3ED935F1A0E448200D3A205 /* blip.caf */,
-				A3ED93601A0E448200D3A205 /* brickhit.caf */,
-				A3ED93611A0E448200D3A205 /* gameover.caf */,
-				A30097141A0CE52C00E5A17D /* ball.png */,
-				A30097151A0CE52C00E5A17D /* ball@2x.png */,
-				A300970C1A0CE52300E5A17D /* brick.png */,
-				A300970D1A0CE52300E5A17D /* brick@2x.png */,
-				A300970E1A0CE52300E5A17D /* paddle.png */,
-				A300970F1A0CE52300E5A17D /* paddle@2x.png */,
 				A30096DA1A0CE4FC00E5A17D /* ClassicBreakTilesGame-Info.plist */,
 				A30096DB1A0CE4FC00E5A17D /* InfoPlist.strings */,
 				A30096DE1A0CE4FC00E5A17D /* main.m */,
@@ -191,6 +184,29 @@
 				A30096FF1A0CE4FC00E5A17D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3B5CDE71A0F7BC9008407B1 /* Audio Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3ED935F1A0E448200D3A205 /* blip.caf */,
+				A3ED93601A0E448200D3A205 /* brickhit.caf */,
+				A3ED93611A0E448200D3A205 /* gameover.caf */,
+			);
+			name = "Audio Resources";
+			sourceTree = "<group>";
+		};
+		A3B5CDE81A0F7BE0008407B1 /* Image Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A30097141A0CE52C00E5A17D /* ball.png */,
+				A30097151A0CE52C00E5A17D /* ball@2x.png */,
+				A300970C1A0CE52300E5A17D /* brick.png */,
+				A300970D1A0CE52300E5A17D /* brick@2x.png */,
+				A300970E1A0CE52300E5A17D /* paddle.png */,
+				A300970F1A0CE52300E5A17D /* paddle@2x.png */,
+			);
+			name = "Image Resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
