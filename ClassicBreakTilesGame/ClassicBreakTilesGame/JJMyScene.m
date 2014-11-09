@@ -131,7 +131,41 @@ static const uint32_t edgeCategory   = 0x1 << 3;
         brick.physicsBody.categoryBitMask = brickCategory;
         
         int xPos = size.width/5 * (i+1);
-        int yPos = size.height - 50; 
+        int yPos = size.height - 120;
+        
+        brick.position = CGPointMake(xPos, yPos);
+        
+        [self addChild:brick];
+    }
+    
+    for(int i=0; i<4; i++)
+    {
+        SKSpriteNode *brick = [SKSpriteNode spriteNodeWithImageNamed:@"brick"];
+        
+        //add a static physics body
+        brick.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:brick.frame.size];
+        brick.physicsBody.dynamic = NO;
+        brick.physicsBody.categoryBitMask = brickCategory;
+        
+        int xPos = size.width/5 * (i+1);
+        int yPos = size.height - 80;
+        
+        brick.position = CGPointMake(xPos, yPos);
+        
+        [self addChild:brick];
+    }
+    
+    for(int i=0; i<4; i++)
+    {
+        SKSpriteNode *brick = [SKSpriteNode spriteNodeWithImageNamed:@"brick"];
+        
+        //add a static physics body
+        brick.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:brick.frame.size];
+        brick.physicsBody.dynamic = NO;
+        brick.physicsBody.categoryBitMask = brickCategory;
+        
+        int xPos = size.width/5 * (i+1);
+        int yPos = size.height - 40;
         
         brick.position = CGPointMake(xPos, yPos);
         
