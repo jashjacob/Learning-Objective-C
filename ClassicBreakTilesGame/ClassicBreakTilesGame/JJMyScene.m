@@ -8,6 +8,7 @@
 
 #import "JJMyScene.h"
 #import "JJEndScene.h"
+#import "JJWonScene.h"
 
 @interface JJMyScene ()
 
@@ -29,6 +30,7 @@ static const uint32_t paddleCategory = 0x1 << 2;
 static const uint32_t edgeCategory   = 0x1 << 3;
 */
 
+int brickDestroyCount;
 
 @implementation JJMyScene
 
@@ -51,7 +53,8 @@ static const uint32_t edgeCategory   = 0x1 << 3;
     SKAction *brickBreakSound = [SKAction playSoundFileNamed:@"brickhit.caf" waitForCompletion:NO];
     SKAction *paddleSound = [SKAction playSoundFileNamed:@"blip.caf" waitForCompletion:NO];
     
-    JJEndScene *end = [JJEndScene sceneWithSize:self.size]; //create another view of type EndScene
+    JJEndScene *end = [JJEndScene sceneWithSize:self.size];  //create view of type EndScene
+    JJWonScene *won = [JJWonScene sceneWithSize:self.size];  //create view of type WonScene
     
     if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask) { //checking if the bodyA is category ball cause bitmask value is 1
         notTheBall = contact.bodyB; //assign notTheBall to be the brickcategory of bodyB which makes ball the bodyA
@@ -78,6 +81,7 @@ static const uint32_t edgeCategory   = 0x1 << 3;
             [self runAction:brickBreakSound];
             [notTheBall.node removeFromParent];
             NSLog(@"Brick broken");
+            brickDestroyCount --;
         }
     }
     
@@ -85,6 +89,11 @@ static const uint32_t edgeCategory   = 0x1 << 3;
     {
         NSLog(@"Play Boing sound");
         [self runAction:paddleSound];
+    }
+    
+    if(brickDestroyCount == 0)
+    {
+        [self.view presentScene:won transition:[SKTransition fadeWithDuration:1.0]];
     }
 
     
@@ -107,7 +116,7 @@ static const uint32_t edgeCategory   = 0x1 << 3;
     //create CGPoint for position
     CGPoint myPoint = CGPointMake(size.width/2, 101); //place ball over the paddle
     ball.position = myPoint;
-    ball.scale = 0.5;
+    ball.scale = 0.4;
     
     //add physicsBody for the ball
     ball.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:ball.frame.size.width/2];
@@ -161,6 +170,8 @@ static const uint32_t edgeCategory   = 0x1 << 3;
 
 -(void) addBricks: (CGSize) size
 {
+    brickDestroyCount = 0 ;
+    
     for(int i=0; i<4; i++)
     {
         SKSpriteNode *brick = [SKSpriteNode spriteNodeWithImageNamed:@"brick"];
@@ -176,6 +187,7 @@ static const uint32_t edgeCategory   = 0x1 << 3;
         brick.position = CGPointMake(xPos, yPos);
         
         [self addChild:brick];
+        brickDestroyCount++;
     }
     
     for(int i=0; i<4; i++)
@@ -193,6 +205,7 @@ static const uint32_t edgeCategory   = 0x1 << 3;
         brick.position = CGPointMake(xPos, yPos);
         
         [self addChild:brick];
+        brickDestroyCount++;
     }
     
     for(int i=0; i<4; i++)
@@ -210,7 +223,9 @@ static const uint32_t edgeCategory   = 0x1 << 3;
         brick.position = CGPointMake(xPos, yPos);
         
         [self addChild:brick];
+        brickDestroyCount++;
     }
+    
 }
 
 
