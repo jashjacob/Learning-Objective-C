@@ -97,14 +97,15 @@ static const uint32_t edgeCategory   = 0x1 << 3;
     SKSpriteNode *ball = [SKSpriteNode spriteNodeWithImageNamed:@"ball"];
     
     //create CGPoint for position
-    CGPoint myPoint = CGPointMake(size.width/2, size.height/2);
+    CGPoint myPoint = CGPointMake(size.width/2, 101); //place ball over the paddle
     ball.position = myPoint;
     
     //add physicsBody for the ball
     ball.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:ball.frame.size.width/2];
     ball.physicsBody.friction = 0;
     ball.physicsBody.linearDamping = 0;
-    ball.physicsBody.restitution = 1 ; //energy lost on impact
+    ball.physicsBody.restitution = 1 ; //energy lost on impact or bounciness
+    
     
     ball.physicsBody.categoryBitMask = ballCategory; //setting categoryBitMask to know what category ball is associated with
     ball.physicsBody.contactTestBitMask = brickCategory | paddleCategory | bottomEdgeCategory; //to know the contact of ball with Brick or Paddle
@@ -113,10 +114,15 @@ static const uint32_t edgeCategory   = 0x1 << 3;
     //add sprite node to the scene
     [self addChild:ball];
     
+    
+    CGFloat angle = arc4random_uniform(1000)/1000.0 * M_PI_2;
+    CGFloat magnitude = 7;
+    
     //create the vector
-    CGVector myVector = CGVectorMake(7, 7);
-    //apply the vector
-    [ball.physicsBody applyImpulse:myVector];
+    CGVector vector = CGVectorMake(magnitude*cos(angle), magnitude*sin(angle));
+    
+    // apply the vector
+    [ball.physicsBody applyImpulse:vector];
 }
 
 -(void) addBricks: (CGSize) size
