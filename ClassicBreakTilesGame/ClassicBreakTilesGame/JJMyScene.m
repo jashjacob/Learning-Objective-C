@@ -51,6 +51,8 @@ static const uint32_t edgeCategory   = 0x1 << 3;
     SKAction *brickBreakSound = [SKAction playSoundFileNamed:@"brickhit.caf" waitForCompletion:NO];
     SKAction *paddleSound = [SKAction playSoundFileNamed:@"blip.caf" waitForCompletion:NO];
     
+    JJEndScene *end = [JJEndScene sceneWithSize:self.size]; //create another view of type EndScene
+    
     if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask) { //checking if the bodyA is category ball cause bitmask value is 1
         notTheBall = contact.bodyB; //assign notTheBall to be the brickcategory of bodyB which makes ball the bodyA
     }
@@ -59,33 +61,40 @@ static const uint32_t edgeCategory   = 0x1 << 3;
         notTheBall = contact.bodyA; //assign notTheBall to be the brickcategory of bodyA which makes ball the body B
     }
     
+    if(notTheBall.categoryBitMask == bottomEdgeCategory)
+    {
+        NSLog(@"OMG! GAMEOVER!");
+        [self.view presentScene:end transition:[SKTransition fadeWithDuration:1.0]];
+    }
+    
+    
     if(notTheBall.categoryBitMask == brickCategory)
     {
         NSLog(@"It's a brick");
-        [self runAction:brickBreakSound];
         
-        [notTheBall.node removeFromParent];
+        int randomBrickBreak = arc4random()%5;
+        
+        if( randomBrickBreak < 3)
+        {
+            [self runAction:brickBreakSound];
+            [notTheBall.node removeFromParent];
+            NSLog(@"Brick broken");
+        }
     }
     
     if (notTheBall.categoryBitMask == paddleCategory)
     {
         NSLog(@"Play Boing sound");
-
         [self runAction:paddleSound];
     }
-    
-    if(notTheBall.categoryBitMask == bottomEdgeCategory)
-    {
-        JJEndScene *end = [JJEndScene sceneWithSize:self.size];
-        [self.view presentScene:end transition:[SKTransition fadeWithDuration:1.0]]; 
-    }
+
     
 }
 
 -(void) addBottomEdge: (CGSize) size
 {
     SKNode *bottomEdge = [SKNode node];
-    bottomEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 1) toPoint:CGPointMake(size.width, 1)];
+    bottomEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 4) toPoint:CGPointMake(size.width, 4)];
     
     bottomEdge.physicsBody.categoryBitMask = bottomEdgeCategory;
     [self addChild:bottomEdge];
