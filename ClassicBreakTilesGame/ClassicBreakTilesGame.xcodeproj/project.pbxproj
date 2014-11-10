@@ -29,6 +29,7 @@
 		A30097131A0CE52300E5A17D /* paddle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A300970F1A0CE52300E5A17D /* paddle@2x.png */; };
 		A30097161A0CE52C00E5A17D /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = A30097141A0CE52C00E5A17D /* ball.png */; };
 		A30097171A0CE52C00E5A17D /* ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A30097151A0CE52C00E5A17D /* ball@2x.png */; };
+		A3DC2CA81A10C6AC00AD2077 /* orb.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A3DC2CA71A10C6AC00AD2077 /* orb.atlas */; };
 		A3ED93621A0E448200D3A205 /* blip.caf in Resources */ = {isa = PBXBuildFile; fileRef = A3ED935F1A0E448200D3A205 /* blip.caf */; };
 		A3ED93631A0E448200D3A205 /* brickhit.caf in Resources */ = {isa = PBXBuildFile; fileRef = A3ED93601A0E448200D3A205 /* brickhit.caf */; };
 		A3ED93641A0E448200D3A205 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = A3ED93611A0E448200D3A205 /* gameover.caf */; };
@@ -74,6 +75,7 @@
 		A300970F1A0CE52300E5A17D /* paddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paddle@2x.png"; sourceTree = "<group>"; };
 		A30097141A0CE52C00E5A17D /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		A30097151A0CE52C00E5A17D /* ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball@2x.png"; sourceTree = "<group>"; };
+		A3DC2CA71A10C6AC00AD2077 /* orb.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = orb.atlas; sourceTree = "<group>"; };
 		A3ED935F1A0E448200D3A205 /* blip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blip.caf; sourceTree = "<group>"; };
 		A3ED93601A0E448200D3A205 /* brickhit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = brickhit.caf; sourceTree = "<group>"; };
 		A3ED93611A0E448200D3A205 /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.caf; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				A3ED936B1A0E4B9600D3A205 /* JJEndScene.h */,
 				A3ED936C1A0E4B9600D3A205 /* JJEndScene.m */,
 				A30096EF1A0CE4FC00E5A17D /* Images.xcassets */,
+				A3DC2CA71A10C6AC00AD2077 /* orb.atlas */,
 				A3B5CDE81A0F7BE0008407B1 /* Image Resources */,
 				A3B5CDE71A0F7BC9008407B1 /* Audio Resources */,
 				A30096D91A0CE4FC00E5A17D /* Supporting Files */,
@@ -295,6 +298,7 @@
 				A30097131A0CE52300E5A17D /* paddle@2x.png in Resources */,
 				A30097111A0CE52300E5A17D /* brick@2x.png in Resources */,
 				A3ED93631A0E448200D3A205 /* brickhit.caf in Resources */,
+				A3DC2CA81A10C6AC00AD2077 /* orb.atlas in Resources */,
 				A30097171A0CE52C00E5A17D /* ball@2x.png in Resources */,
 				A30097121A0CE52300E5A17D /* paddle.png in Resources */,
 				A30097101A0CE52300E5A17D /* brick.png in Resources */,

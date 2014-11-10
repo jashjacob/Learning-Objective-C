@@ -67,7 +67,6 @@ static const uint32_t edgeCategory   = 0x1 << 3;
         [self.view presentScene:end transition:[SKTransition fadeWithDuration:1.0]];
     }
     
-    
     if(notTheBall.categoryBitMask == brickCategory)
     {
         NSLog(@"It's a brick");
@@ -103,11 +102,12 @@ static const uint32_t edgeCategory   = 0x1 << 3;
 
 - (void)addBall:(CGSize)size {
     //create a new sprite
-    SKSpriteNode *ball = [SKSpriteNode spriteNodeWithImageNamed:@"ball"];
+    SKSpriteNode *ball = [SKSpriteNode spriteNodeWithImageNamed:@"orb0000"];
     
     //create CGPoint for position
     CGPoint myPoint = CGPointMake(size.width/2, 101); //place ball over the paddle
     ball.position = myPoint;
+    ball.scale = 0.5;
     
     //add physicsBody for the ball
     ball.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:ball.frame.size.width/2];
@@ -119,6 +119,31 @@ static const uint32_t edgeCategory   = 0x1 << 3;
     ball.physicsBody.categoryBitMask = ballCategory; //setting categoryBitMask to know what category ball is associated with
     ball.physicsBody.contactTestBitMask = brickCategory | paddleCategory | bottomEdgeCategory; //to know the contact of ball with Brick or Paddle
     //ball.physicsBody.collisionBitMask = edgeCategory | brickCategory; // to allow the ball to collide only with edge and brick
+    
+    //get reference to atlas
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"orb"];
+    //get all image filename
+    NSArray *orbImageNames = [atlas textureNames];
+    
+    //sort the filenames
+    NSArray *sortedNames = [orbImageNames sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    //array to hold image textures
+    NSMutableArray *orbTexture = [NSMutableArray array];
+    
+    for(NSString *filename in sortedNames)
+    {
+        SKTexture *texture = [atlas textureNamed:filename];
+        [orbTexture addObject:texture];
+    }
+    
+    SKAction *glow =[SKAction animateWithTextures:orbTexture timePerFrame:0.1];
+    SKAction *reverseglow = [glow reversedAction];
+    
+    SKAction *glowloop = [SKAction sequence:@[glow,reverseglow]];
+    SKAction *keepGlowing = [SKAction repeatActionForever:glowloop];
+    
+    [ball runAction:keepGlowing];
     
     //add sprite node to the scene
     [self addChild:ball];
@@ -257,8 +282,8 @@ static const uint32_t edgeCategory   = 0x1 << 3;
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        self.backgroundColor = [SKColor whiteColor];
-        
+        self.backgroundColor = [SKColor colorWithRed:(241/255.0) green:(196/255.0) blue:(15/255.0) alpha:1.0];
+       
         //add a physicsBody to the background in the scene
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         self.physicsBody.categoryBitMask = edgeCategory;
