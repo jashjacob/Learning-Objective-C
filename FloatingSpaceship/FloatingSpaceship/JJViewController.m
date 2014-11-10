@@ -11,6 +11,11 @@
 
 @implementation JJViewController
 
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
