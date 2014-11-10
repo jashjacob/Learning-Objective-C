@@ -24,39 +24,43 @@ static const uint32_t bottomEdgeCategory = 16;
 
 // Alternatively using Bit Wise operators
 /*
-static const uint32_t ballCategory   = 0x1;      //00000000000000000000000000000001
-static const uint32_t brickCategory  = 0x1 << 1; //00000000000000000000000000000010
-static const uint32_t paddleCategory = 0x1 << 2;
-static const uint32_t edgeCategory   = 0x1 << 3;
+ static const uint32_t ballCategory   = 0x1;      //00000000000000000000000000000001
+ static const uint32_t brickCategory  = 0x1 << 1; //00000000000000000000000000000010
+ static const uint32_t paddleCategory = 0x1 << 2;
+ static const uint32_t edgeCategory   = 0x1 << 3;
 */
 
-int brickDestroyCount;
+int brickDestroyCount; // to handle the brickcount to determine whether the game has been won
 
 @implementation JJMyScene
 
--(void)didBeginContact:(SKPhysicsContact *)contact{
+
+-(void)didBeginContact:(SKPhysicsContact *)contact
+{
     
-//    if (contact.bodyA.categoryBitMask == brickCategory) {
-//        NSLog(@"BodyA is a brick");
-//        [contact.bodyA.node removeFromParent];
-//    }
-//    if (contact.bodyB.categoryBitMask == brickCategory)
-//    {
-//        NSLog(@"BodyB is a brick");
-//        [contact.bodyB.node removeFromParent];
-//    }
+    //    if (contact.bodyA.categoryBitMask == brickCategory) {
+    //        NSLog(@"BodyA is a brick");
+    //        [contact.bodyA.node removeFromParent];
+    //    }
+    //    if (contact.bodyB.categoryBitMask == brickCategory)
+    //    {
+    //        NSLog(@"BodyB is a brick");
+    //        [contact.bodyB.node removeFromParent];
+    //    }
     
     //create a placeholer reference for the "non ball" object
     SKPhysicsBody *notTheBall;
     
-    
+    //create action for sound
     SKAction *brickBreakSound = [SKAction playSoundFileNamed:@"brickhit.caf" waitForCompletion:NO];
     SKAction *paddleSound = [SKAction playSoundFileNamed:@"blip.caf" waitForCompletion:NO];
     
     JJEndScene *end = [JJEndScene sceneWithSize:self.size];  //create view of type EndScene
     JJWonScene *won = [JJWonScene sceneWithSize:self.size];  //create view of type WonScene
     
-    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask) { //checking if the bodyA is category ball cause bitmask value is 1
+    //checking if the bodyA is category ball cause bitmask value is 1
+    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
+    {
         notTheBall = contact.bodyB; //assign notTheBall to be the brickcategory of bodyB which makes ball the bodyA
     }
     else
@@ -67,6 +71,7 @@ int brickDestroyCount;
     if(notTheBall.categoryBitMask == bottomEdgeCategory)
     {
         NSLog(@"OMG! GAMEOVER!");
+        //update view with end view
         [self.view presentScene:end transition:[SKTransition fadeWithDuration:1.0]];
     }
     
@@ -75,7 +80,7 @@ int brickDestroyCount;
         NSLog(@"It's a brick");
         
         int randomBrickBreak = arc4random()%5;
-        
+        //randominzing if the brick needs to be broken - #need to be changed
         if( randomBrickBreak < 3)
         {
             [self runAction:brickBreakSound];
@@ -92,10 +97,10 @@ int brickDestroyCount;
     }
     
     if(brickDestroyCount == 0)
-    {
+    {   NSLog(@"OMG! GAME WON!");
+        //update view with won view
         [self.view presentScene:won transition:[SKTransition fadeWithDuration:1.0]];
     }
-
     
 }
 
@@ -109,7 +114,8 @@ int brickDestroyCount;
 }
 
 
-- (void)addBall:(CGSize)size {
+- (void)addBall:(CGSize)size
+{
     //create a new sprite
     SKSpriteNode *ball = [SKSpriteNode spriteNodeWithImageNamed:@"orb0000"];
     
@@ -157,7 +163,7 @@ int brickDestroyCount;
     //add sprite node to the scene
     [self addChild:ball];
     
-    
+    //set angle at random
     CGFloat angle = arc4random_uniform(1000)/1000.0 * M_PI_2;
     CGFloat magnitude = 7;
     
@@ -258,7 +264,7 @@ int brickDestroyCount;
     {
         CGPoint location = [touch locationInNode:self];
         CGPoint newPosition = CGPointMake(location.x, 100);
-    
+        
         if( newPosition.x < self.paddle.size.width/2)
         {
             newPosition.x = self.paddle.size.width/2;
@@ -269,7 +275,6 @@ int brickDestroyCount;
         }
         
         self.paddle.position = newPosition;
-        
     }
     
 }
@@ -290,15 +295,15 @@ int brickDestroyCount;
     //add to scene
     [self addChild:self.paddle];
     
-    
 }
 
--(id)initWithSize:(CGSize)size {    
-    if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
+-(id)initWithSize:(CGSize)size
+{
+    if (self = [super initWithSize:size])
+    {
         
         self.backgroundColor = [SKColor colorWithRed:(241/255.0) green:(196/255.0) blue:(15/255.0) alpha:1.0];
-       
+        
         //add a physicsBody to the background in the scene
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         self.physicsBody.categoryBitMask = edgeCategory;
